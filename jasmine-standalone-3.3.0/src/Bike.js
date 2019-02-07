@@ -3,5 +3,5 @@ function Bike() {
 }
 
 Bike.prototype.reportBroken = function () {
-  this.isWorking = false  
+  this.isWorking = false
 };

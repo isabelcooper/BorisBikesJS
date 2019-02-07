@@ -7,7 +7,11 @@ DockingStation.prototype.dockBike = function(bike) {
 }
 
 DockingStation.prototype.borrowBike = function(bike) {
-  this.removeBike(bike)
+  if (bike.isWorking() === true ) {
+    this.removeBike(bike)
+  }  else {
+  throw "This bike is broken"
+  }
 };
 
 DockingStation.prototype.removeBike = function(bike) {
